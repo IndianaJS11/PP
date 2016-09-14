@@ -27,14 +27,15 @@
     background-image: url("wood-pattern-ground-parquet-floor.jpg");
 
     /* Set a specific height */
-    min-height: 66px;
+    min-height: 75px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    width: 90%;
+    margin: auto;
 }
 
 .hub{
@@ -47,14 +48,63 @@
     margin: 0px;
     padding: 0px;
     position: fixed;
+    z-index: 1;
 
 }
 
 .CForm {
     text-align: center;
-    border-style: solid;
+    padding: 10px;
+    width: 60%;
+    margin: auto;
+    font-family: 'Permanent Marker', cursive;
+
+}
+
+#submitB {
+    background-color: rgba(0, 0, 0, 0.75) ;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    width: 60px;
+    height: 30px;
+    font-size: 13px;
+    margin: 5px;
+}
 
 
+#resetB {
+    background-color: rgba(0, 0, 0, 0.75) ;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    width: 60px;
+    height: 30px;
+    font-size: 13px;
+    margin: 5px;
+}
+
+#submitB:hover {
+    background-color: darkgray;
+}
+
+#resetB:hover {
+    background-color: darkgray;
+}
+
+#Email {
+    width: 56%;
+    text-align: center;
+}
+
+#FirstName {
+    width: 56%;
+    text-align: center;
+}
+
+#LastName {
+    width: 56%;
+    text-align: center;
 }
 
 ul.topnav {
@@ -63,17 +113,34 @@ ul.topnav {
     padding: 0;
     overflow: hidden;
     width: 100%;
-
+    position: relative;
+    top: -3px;
 }
 
 .MTitle {
     font-family: 'Permanent Marker', cursive;
-    margin-top: 60px;
-    top: 50px;
+    width: 80%;
+    background-color: white;
     border-style: solid;
-    border-width: 5px;
+    border-width: 3px;
     text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
 
+.ConTitle {
+    font-family: 'Permanent Marker', cursive;
+    width: 60%;
+    position: relative;
+    background-color: white;
+    border-style: solid;
+    border-width: 3px;
+    text-align: center;
+    margin: auto;
+    top: 6px;
+    margin-top: 50px;
+    margin-bottom: 5px;
 }
 
 .menu{
@@ -96,23 +163,25 @@ ul.topnav li a {
     color: black;
     text-align: center;
     text-decoration: none;
-    transition: 0.3s;
+
     font-family: 'Permanent Marker', cursive;
     font-size: 25px;
-
+    transition: .5s;
 
 }
 
 ul.topnav li a:hover {
-    background-color: darkgray;
+
     opacity: 0.8;
+    color: rgba(0, 0, 0, 0.56);
+    text-decoration: underline;
 
 }
 
 ul.topnav li.icon {display: none;}
 
 @media screen and (max-width:690px) {
-    ul.topnav li:not(:active) {
+    ul.topnav li:not(:first-child) {
         display: none;}
 
     ul.topnav li.icon {
