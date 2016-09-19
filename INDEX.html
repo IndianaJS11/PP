@@ -6,42 +6,73 @@
     <link rel="stylesheet" href="STYLE.css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <link href="font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
+
+
 </head>
 
 <body>
 
     <div class="hub"> <!-- holds menu icons and Hero -->
         <ul class="topnav" id="myTopnav">
-
-
-
             <li class="active"><a href="INDEX.html">Home</a></li>
             <li><a href="Portfolio.html">Portfolio</a></li>
+
+
             <li><a href="Contact.html">Contact</a></li>
             <li><a href="Resume.html">Resume</a></li>
             <li class="icon">
-                <a href="javascript:void(0);" style="font-size:15px; color: black;" onclick="myFunction()">☰</a>
+                <a href="javascript:void(0);" style="font-size:20px; color: white;" onclick="myFunction()">☰</a>
             </li>
 
         </ul>
     </div> <!-- hub -->
 
-    <p class=MTitle style="font-size: 30px;"> ~ Indiana Sands ~ </p>
+   <p class=MTitle style="font-size: 60px; font-family: 'Lobster'; text-decoration: overline underline">  Indiana Sands  </p>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.min.js"></script>
+    <script type="text/javascript">
+        $(function($){
+            var addToAll = true;
+            var gallery = true;
+            var titlePosition = 'inside';
+            $(addToAll ? 'img' : 'img.fancybox').each(function(){
+                var $this = $(this);
+                var title = $this.attr('title');
+                var src = $this.attr('data-big') || $this.attr('src');
+                var a = $('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', title);
+                $this.wrap(a);
+            });
+            if (gallery)
+                $('a.fancybox').attr('rel', 'fancyboxgallery');
+            $('a.fancybox').fancybox({
+                titlePosition: titlePosition
+            });
+        });
+        $.noConflict();
+    </script>
+
+
+
+
 
     <div class="parallax">
 
-      >
+
 
 
         <div id="mesecone">
-            <p style="font-family: 'Permanent Marker', cursive; font-size: 40px; text-align: center; text-decoration: underline;
+            <p style="font-family: 'Lobster', cursive; font-size: 40px; text-align: center; text-decoration: underline;
              margin: 10px;">About Me</p>
-            <img class="pic" src="indycol.jpg" title="Me in Colorado: summer of 2016">
-            <img class="pic" src="fam.jpg" title="Most of my family">
+            <img class="fancybox" src="indycol.jpg" title="Me in Colorado: summer of 2016">
+            <img class="fancybox" src="fam.jpg" title="Most of my family">
             <div id="meone">
 
                 <p>My name is Indiana Sands. I was born on November 11th, 1996 in American Fork, Utah. I grew up in young Lehi, Ut where
-                    I finished high school at Lehi High. Over the course of my life so far I have been luchy to experience all that I have.
+                    I finished high school at Lehi High. Over the course of my life so far I have been lucky to experience all that I have.
                     From playing in a rock n roll band, to falling in love and learning new things.
                 </p>
                 <p>
@@ -56,25 +87,27 @@
                     have been made with her and I expect many more to come....... (Whoever said Tinder doesn't work lied!)
                 </p>
             </div>
-            <img class="pic" src="aai.jpg" title="Me and my girlfriend Anastayja">
-            <img class="pic" src="jeffparkerindy.jpg" title="My good friends Parker and Jeff">
+            <img class="fancybox" src="aai.jpg" title="Me and my girlfriend Anastayja">
+            <img class="fancybox" src="jeffparkerindy.jpg" title="My good friends Parker and Jeff">
 
 
         </div>
 
     </div>
 
-    <div style="height:40px;background-color:white;font-size:36px">
+
 
     </div>
+
+    <hr style="width: 60%">
 
     <div class="parallax">
 
     <div id="mesectwo">
-        <p style="font-family: 'Permanent Marker', cursive; font-size: 40px; text-align: center; text-decoration: underline;
+        <p style="font-family: 'Lobster', cursive; font-size: 40px; text-align: center; text-decoration: underline;
              margin: 10px;">More...</p>
-        <img class="pic" src="Breezeway.jpg" title="At Jazzy's in ST. George">
-        <img class="pic" src="breezme.jpg" title="Me rockin hard at Jazzy's in ST. George">
+        <img class="fancybox" src="Breezeway.jpg" title="At Jazzy's in ST. George">
+        <img class="fancybox" src="breezme.jpg" title="Me rockin hard at Jazzy's in ST. George">
         <div id="metwo">
 
             <p>The year I got into high school was just around the same time that I started taking professional guitar lessons, playing in
@@ -98,8 +131,8 @@
         </div>
 
 
-        <img class="pic" src="breezvid.jpg" title="tight footage at Jazzy's">
-        <img class="pic" src="breezlogo.jpg" title="2016 album 'It Goes Like This'">
+        <img class="fancybox" src="breezvid.jpg" title="tight footage at Jazzy's">
+        <img class="fancybox" src="breezlogo.jpg" title="2016 album 'It Goes Like This'">
 
 
 
